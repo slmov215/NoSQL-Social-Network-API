@@ -26,7 +26,7 @@ const userController = {
         .populate({ path: "friends", select: "-__v" });
 
       if (!user) {
-        return res.status(404).json({ message: "No user with that ID" });
+        return res.status(404).json({ message: "Cannot find user with that ID" });
       }
 
       return res.status(200).json(user);
@@ -57,7 +57,7 @@ const userController = {
       );
 
       if (!user) {
-        return res.status(404).json({ message: "No user with this id!" });
+        return res.status(404).json({ message: "Cannot find user with this id!" });
       }
 
       return res.status(200).json(user);
@@ -73,12 +73,12 @@ const userController = {
       const user = await User.findOneAndDelete({ _id: req.params.userId });
 
       if (!user) {
-        return res.status(404).json({ message: "No user with that ID" });
+        return res.status(404).json({ message: "Cannot find user with that ID" });
       }
 
       await Thought.deleteMany({ _id: { $in: user.thoughts } });
       return res.status(200).json({
-        message: "User and associated thoughts and reactions deleted!",
+        message: "User and related thoughts and reactions has been deleted!",
       });
     } catch (err) {
       console.log(err);
@@ -96,7 +96,7 @@ const userController = {
       );
 
       if (!friend) {
-        return res.status(404).json({ message: "No user with that ID" });
+        return res.status(404).json({ message: "Cannot find user with that ID" });
       }
 
       return res.status(200).json(friend);
@@ -116,7 +116,7 @@ const userController = {
       );
 
       if (!friend) {
-        return res.status(404).json({ message: "Check user and friend ID" });
+        return res.status(404).json({ message: "Cannot find user and friend ID" });
       }
 
       return res.status(200).json(friend);
