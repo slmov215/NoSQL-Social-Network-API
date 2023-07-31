@@ -33,8 +33,8 @@ This application may be used by starting the server with npm run start or nodemo
 
 [Recored Demo](https://drive.google.com/file/d/1wrAye-cL6WaN1EJ_uByh6rAUE5p6edR8/view?usp=sharing)
 
+![Screenshoot](https://github.com/slmov215/NoSQL-Social-Network-API/assets/127278005/820c6692-ecda-4fb4-b117-af514838afb9)
 
-![Screenshot]()
 
 ## License
 [MIT License](https://opensource.org/licenses/MIT)
