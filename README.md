@@ -15,7 +15,7 @@ This project was built utilizing a MongoDB database, and Express.js routing. It 
 
 ## Installation
 
-* First you will need to clone this repository to your computer. [Link](https://github.com/slmov215/)
+* First you will need to clone this repository to your computer. [Link](https://github.com/slmov215/NoSQL-Social-Network-API)
 * Next, open VS code. 
   - [Click Here](https://code.visualstudio.com/) If you do not have it installed. 
 
