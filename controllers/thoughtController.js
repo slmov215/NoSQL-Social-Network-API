@@ -1,7 +1,7 @@
 // Imports
 const { User, Thought } = require("../models");
 
-// Get all thoughts
+// Get / Find all thoughts
 const thoughtController = {
   async getThoughts(req, res) {
     try {
@@ -13,7 +13,7 @@ const thoughtController = {
     }
   },
 
-  // Get single thought
+  // Get / Find one thought
   async getThought(req, res) {
     try {
       const thought = await Thought.findOne({ _id: req.params.thoughtId });
@@ -29,7 +29,11 @@ const thoughtController = {
     }
   },
 
-  // Create thought
+  // how to get thought to show up when user is found? 
+  // how to create relationship between models?
+  // how to get all item to associated to the user in mongoose?
+
+  // Create / Post thought
   async createThought(req, res) {
     try {
       const thought = await Thought.create(req.body);
@@ -47,7 +51,7 @@ const thoughtController = {
     }
   },
 
-  // Update thought
+  // Update / Put thought
   async updateThought(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(
@@ -87,7 +91,7 @@ const thoughtController = {
     }
   },
 
-  // Add reaction
+  // Add / Create a reaction
   async addReaction(req, res) {
     try {
       const reaction = await Thought.findOneAndUpdate(
@@ -107,7 +111,7 @@ const thoughtController = {
     }
   },
 
-  // Delete reaction
+  // Delete a reaction
   async deleteReaction(req, res) {
     try {
       const reaction = await Thought.findOneAndUpdate(
